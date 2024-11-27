@@ -1,0 +1,19 @@
+{
+  "name": "carritos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/amqplib": "^0.10.5",
+    "@types/prompt": "^1.1.9",
+    "amqplib": "^0.10.5",
+    "prompt": "^1.3.0",
+    "typescript": "^5.7.2"
+  }
+}
