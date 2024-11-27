@@ -1,4 +1,12 @@
 import * as amqp from 'amqplib/callback_api';
+import * as fs from 'node:fs';
+
+const opts = {
+    cert: fs.readFileSync('./llaves/client_natsu_certificate.pem'),
+    key: fs.readFileSync('./llaves/client_natsu_key.pem'),
+    passphrase: 'hola123',
+    ca: [fs.readFileSync('./llaves/ca_certificate.pem')]
+};
 
 export class RabbitEnvio {
 
@@ -9,7 +17,7 @@ export class RabbitEnvio {
 
     async connect(): Promise<any> {
         const promise = new Promise((resolve, reject) => {
-            amqp.connect(this.url, (err, connection) => {
+            amqp.connect(this.url, opts, (err, connection) => {
                 if (err) {
                     resolve(err);
                     return;

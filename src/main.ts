@@ -42,7 +42,7 @@ async function moverVehiculo() {
     });
 }
 
-RabbitEnvio.obtenerInstancia().setUrl('amqp://localhost').connect()
+RabbitEnvio.obtenerInstancia().setUrl('amqps://localhost').connect()
 .then( err => {
     if (err) throw err;
 
