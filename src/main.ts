@@ -5,7 +5,7 @@ import prompt from 'prompt';
 
 // configurar el carro
 const v = Vehiculo.obtenerInstancia();
-    v.identificador = 'carro'+Math.random();
+    v.identificador = 'carro'+Date.now();
     v.velocidad = 100;
     v.posicion = {
         x: 0,
